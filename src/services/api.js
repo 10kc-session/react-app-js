@@ -1,7 +1,7 @@
 // src/services/api.js
 import axios from 'axios';
 
-const API_URL = 'http://13.61.25.237:8080/api/users';
+const API_URL = '/api';
 
 const api = axios.create({
     baseURL: API_URL,
