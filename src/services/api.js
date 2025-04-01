@@ -1,13 +1,20 @@
 // src/services/api.js
 import axios from 'axios';
+import https from 'https'; // Import https module
 
 const API_URL = 'https://13.60.56.180:8443/api/users';
+
+// Create an httpsAgent that ignores SSL certificate validation
+const agent = new https.Agent({
+    rejectUnauthorized: false // Bypass SSL certificate validation
+});
 
 const api = axios.create({
     baseURL: API_URL,
     headers: {
         'Content-Type': 'application/json'
-    }
+    },
+    httpsAgent: agent // Add the httpsAgent to axios instance
 });
 
 export const fetchUsers = async () => {

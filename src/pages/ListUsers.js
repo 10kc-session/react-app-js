@@ -42,7 +42,7 @@ const ListUsers = () => {
 
     const handleEdit = (id) => navigate(`/users/edit/${id}`);
 
-    // ✅ Pass the correct userId when navigating to delete page
+
     const handleDelete = (id) => navigate(`/users/delete`, { state: { userId: id } });
 
     const filteredUsers = users.filter(user =>
