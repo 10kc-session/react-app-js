@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'https://13.60.56.180:8443/api/users';
+const API_URL = 'https://user-management.site/api/users';
 
 // Create the API instance
 const api = axios.create({
